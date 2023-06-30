@@ -30,13 +30,19 @@ h4 {
 
 #needs {
     display: inline-block;
-    width: 40%;
+    width: 30%;
     border: 1px solid black;
 }
 
 #wants {
     display: inline-block;
-    width: 40%;
+    width: 30%;
+    border: 1px solid black;
+}
+
+#savings {
+    display: inline-block;
+    width: 30%;
     border: 1px solid black;
 }
 
@@ -59,11 +65,11 @@ h4 {
 }
 
 .need-cost {
-    width: 35%;
+    width: 45%;
 }
 
 .want-cost {
-    width: 35%;
+    width: 45%;
 }
 
 .want-name {
@@ -74,5 +80,31 @@ h4 {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    border: 1px solid black;
+}
+
+#results-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+#comparison-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid black;
+}
+
+#needs-results-container {
+    border: 1px solid black;
+}
+
+#wants-results-container {
+    border: 1px solid black;
+}
+
+#savings-results {
     border: 1px solid black;
 }
