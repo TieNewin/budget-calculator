@@ -40,13 +40,13 @@ h4 {
     border: 1px solid black;
 }
 
-.needs-container {
+#needs-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
 }
 
-.wants-container {
+#wants-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -58,12 +58,21 @@ h4 {
     border: 1px solid black;
 }
 
-.expense-cost {
-    width: 60%;
+.need-cost {
+    width: 35%;
+}
+
+.want-cost {
+    width: 35%;
+}
+
+.want-name {
+    width: 50%;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
+    margin-top: 25px;
     border: 1px solid black;
 }

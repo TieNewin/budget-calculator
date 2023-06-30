@@ -25,60 +25,99 @@
     <div class="expenses-container">
         <div id="needs">
             <h3>Necessary Expenses</h3>
-            <div class="needs-container">
+            <div id="needs-container">
+
                 <div class="expense-item">
                     <h6>Housing (Mortgage/Rent)</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
                 <div class="expense-item">
                     <h6>Transportation (Car Note/Gas)</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
                 <div class="expense-item">
                     <h6>Other Debt (Credit Card/Student<br>Loans/etc.)</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
                 <div class="expense-item">
                     <h6>Insurance (Home/Auto/Life/Health)</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
                 <div class="expense-item">
                     <h6>Utilities (Electricity/Gas/Water/Trash<br>/Recycling/Sewer)</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
                 <div class="expense-item">
-                    <h6>Groceries</h6>
-                    <div class="input-group mb-3 expense-cost">
+                    <h6>Groceries (Food/Drink/Household<br>Supplies)</h6>
+                    <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
                         <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
                     </div>
                 </div>
+
+                <div class="expense-item">
+                    <h6>Other</h6>
+                    <div class="input-group mb-3 need-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div id="wants">
             <h3>Personal Expenses</h3>
-            <div class="wants-container"></div>
+            <div id="wants-container">
+
+                <div class="expense-item">
+                    <div class="input-group mb-3 want-name">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group mb-3 want-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-text">/month</span>
+                    </div>
+                </div>
+
+                <div id="button-slot" class="expense-item">
+                    <button type="button" id="add" class="btn btn-primary"><img src="img/plus-lg.svg"></button>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <div class="button-container">
-        <button type="button" class="btn btn-primary">Calculate</button>
+        <button type="button" id="calculate" class="btn btn-primary">Calculate</button>
     </div>    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
