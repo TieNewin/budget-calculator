@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/favicon-32x32.png">
+</head>
+<body>
+    <h1>Budget Calculator</h1>
+
+    <h3>Enter your Gross Monthly Income</h3>
+    <h4>(Income after tax reductions)</h4>
+
+    <div id="income">
+        <h3></h3>
+        <div class="input-group mb-3" id="income-input">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="expenses-container">
+        <div id="needs">
+            <h3>Necessary Expenses</h3>
+            <div class="needs-container">
+                <div class="expense-item">
+                    <h6>Housing (Mortgage/Rent)</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="expense-item">
+                    <h6>Transportation (Car Note/Gas)</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="expense-item">
+                    <h6>Other Debt (Credit Card/Student<br>Loans/etc.)</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="expense-item">
+                    <h6>Insurance (Home/Auto/Life/Health)</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="expense-item">
+                    <h6>Utilities (Electricity/Gas/Water/Trash<br>/Recycling/Sewer)</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="expense-item">
+                    <h6>Groceries</h6>
+                    <div class="input-group mb-3 expense-cost">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="wants">
+            <h3>Personal Expenses</h3>
+            <div class="wants-container"></div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button type="button" class="btn btn-primary">Calculate</button>
+    </div>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
