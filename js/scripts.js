@@ -1,11 +1,15 @@
+//Add new personal expense button
 let button = document.getElementById('add');
 button.addEventListener('click', newItem);
 
+//Master calculate button
 let submit = document.getElementById('calculate');
 submit.addEventListener('click', calculate);
 
+//Variable count for number of personal expense items
 let personalExpenses = 1;
 
+//Add new personal expense item function
 function newItem() {
     personalExpenses += 1;
 
@@ -70,6 +74,7 @@ function newItem() {
     wantsContainer.appendChild(newButtonSlot);
 }
 
+//Master calculate function
 function calculate() {
     let housing = parseInt(document.getElementById('housing').value);
     let transportation = parseInt(document.getElementById('transportation').value);
