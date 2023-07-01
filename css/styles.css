@@ -14,7 +14,6 @@ h6 {
 #income-container {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
 }
 
 #income-input {
@@ -24,22 +23,14 @@ h6 {
 .expenses-container {
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
 }
 
 #needs, #wants, #savings {
     display: inline-block;
     width: 30%;
-    border: 1px solid black;
 }
 
-#needs-container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-}
-
-#wants-container {
+#needs-container, #wants-container, #savings-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -48,7 +39,7 @@ h6 {
 .expense-item {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .need-cost, .want-cost {
@@ -63,19 +54,18 @@ h6 {
     display: flex;
     justify-content: center;
     margin-top: 25px;
-    border: 1px solid black;
 }
 
 #results-container {
     margin-top: 25px;
     display: none;
     justify-content: space-around;
-    border: 1px solid black;
 }
 
 #comparison-container, #suggestion-container, #solution-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 30%;
     border: 1px solid black;
 }
@@ -83,7 +73,7 @@ h6 {
 #needs-results, #wants-results, #savings-results, #housing-suggestion, #transportation-suggestion, #debt-suggestion {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #recommended-needs, #your-needs, #recommended-wants, #your-wants, #recommended-savings, #your-savings, #recommended-housing, #your-housing, #recommended-transportation, #your-transportation, #recommended-debt, #your-debt {
@@ -91,11 +81,10 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
 }
 
 #spending-solution, #income-solution {
     display: flex;
     height: 100px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
