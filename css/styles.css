@@ -11,7 +11,7 @@ h6 {
     text-align: left;
 }
 
-#income {
+#income-container {
     display: flex;
     justify-content: center;
     border: 1px solid black;
@@ -68,7 +68,7 @@ h6 {
 
 #results-container {
     margin-top: 25px;
-    display: flex;
+    display: none;
     justify-content: space-around;
     border: 1px solid black;
 }
@@ -95,6 +95,7 @@ h6 {
 }
 
 #spending-solution, #income-solution {
+    display: flex;
     height: 100px;
     border: 1px solid black;
 }
