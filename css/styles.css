@@ -1,15 +1,14 @@
-h1 {
-    text-align: center;
-    margin-top: 25px;
-}
-
-h3 {
+h1, h3 {
     text-align: center;
     margin-top: 25px;
 }
 
 h4 {
     text-align: center;
+}
+
+h6 {
+    text-align: left;
 }
 
 #income {
@@ -28,19 +27,7 @@ h4 {
     border: 1px solid black;
 }
 
-#needs {
-    display: inline-block;
-    width: 30%;
-    border: 1px solid black;
-}
-
-#wants {
-    display: inline-block;
-    width: 30%;
-    border: 1px solid black;
-}
-
-#savings {
+#needs, #wants, #savings {
     display: inline-block;
     width: 30%;
     border: 1px solid black;
@@ -64,11 +51,7 @@ h4 {
     border: 1px solid black;
 }
 
-.need-cost {
-    width: 45%;
-}
-
-.want-cost {
+.need-cost, .want-cost {
     width: 45%;
 }
 
@@ -97,14 +80,16 @@ h4 {
     border: 1px solid black;
 }
 
-#needs-results-container {
+#needs-results, #wants-results, #savings-results {
+    display: flex;
+    justify-content: space-between;
     border: 1px solid black;
 }
 
-#wants-results-container {
-    border: 1px solid black;
-}
-
-#savings-results {
+#recommended-needs, #your-needs, #recommended-wants, #your-wants, #recommended-savings, #your-savings {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid black;
 }
