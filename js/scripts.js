@@ -1,7 +1,14 @@
 let button = document.getElementById('add');
 button.addEventListener('click', newItem);
 
+let submit = document.getElementById('calculate');
+submit.addEventListener('click', calculate);
+
+let personalExpenses = 1;
+
 function newItem() {
+    personalExpenses += 1;
+
     let buttonSlot = document.getElementById('button-slot');
     buttonSlot.remove();
 
@@ -25,6 +32,7 @@ function newItem() {
     dollarSign.innerText = '$';
 
     let costInput = document.createElement('input');
+    costInput.setAttribute('id', 'want' + personalExpenses);
     costInput.setAttribute('type', 'text');
     costInput.classList.add('form-control');
 
@@ -62,3 +70,20 @@ function newItem() {
     wantsContainer.appendChild(newButtonSlot);
 }
 
+function calculate() {
+    let housing = parseInt(document.getElementById('housing').value);
+    let transportation = parseInt(document.getElementById('transportation').value);
+    let debt = parseInt(document.getElementById('debt').value);
+    let insurance = parseInt(document.getElementById('insurance').value);
+    let utilities = parseInt(document.getElementById('utilities').value);
+    let groceries = parseInt(document.getElementById('groceries').value);
+    let other = parseInt(document.getElementById('other').value);
+
+    let personal = 0;
+    for (let x = 1; x <= personalExpenses; x++) {
+        let currentCost = parseInt(document.getElementById('want' + x).value);
+        personal += currentCost;
+    }
+
+    let savings = parseInt(document.getElementById('savings-amount').value);
+}

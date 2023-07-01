@@ -11,9 +11,10 @@
 <body>
     <h1>Budget Calculator</h1>
 
-    <h3>Enter your Net Monthly Income</h3>
-    <h4>(Income after tax reductions)</h4>
+    <h3>Enter your Gross Monthly Income</h3>
+    <h4>(Income before tax reductions)</h4>
 
+    <!--Income input section-->
     <div id="income">
         <h3></h3>
         <div class="input-group mb-3" id="income-input">
@@ -22,6 +23,7 @@
         </div>
     </div>
 
+    <!--Necessity expenses input section-->
     <div class="expenses-container">
         <div id="needs">
             <h3>Necessary Expenses</h3>
@@ -31,7 +33,7 @@
                     <h6>Housing (Mortgage/Rent)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="housing" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -40,7 +42,7 @@
                     <h6>Transportation (Car Note/Gas)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="transportation" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -49,7 +51,7 @@
                     <h6>Other Debt (Credit Card/Student<br>Loans/etc.)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="debt" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -58,7 +60,7 @@
                     <h6>Insurance (Home/Auto/Life/Health)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="insurance" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -67,7 +69,7 @@
                     <h6>Utilities (Electricity/Gas/Water/Trash<br>/Recycling/Sewer)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="utilities" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -76,7 +78,7 @@
                     <h6>Groceries (Food/Drink/Household<br>Supplies)</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="groceries" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -85,7 +87,7 @@
                     <h6>Other</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="other" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -93,6 +95,7 @@
             </div>
         </div>
 
+        <!--Personal spending input section-->
         <div id="wants">
             <h3>Personal Expenses</h3>
             <div id="wants-container">
@@ -103,7 +106,7 @@
                     </div>
                     <div class="input-group mb-3 want-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="want1" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -115,6 +118,7 @@
             </div>
         </div>
 
+        <!--Savings input section-->
         <div id="savings">
             <h3>Savings</h3>
             <div id="savings-container">
@@ -122,7 +126,7 @@
                     <h6>Savings</h6>
                     <div class="input-group mb-3 need-cost">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control">
+                        <input id="savings-amount" type="text" class="form-control">
                         <span class="input-group-text">/month</span>
                     </div>
                 </div>
@@ -130,10 +134,12 @@
         </div>
     </div>
 
+    <!--Master calculate button-->
     <div class="button-container">
         <button type="button" id="calculate" class="btn btn-primary">Calculate</button>
     </div>
     
+    <!--Temporary example layout for calculation results. This will be deleted once there is JS code that creates it all-->
     <div id="results-container">
         <div id="comparison-container">
             <div id="needs-results">
@@ -168,69 +174,45 @@
             </div>
         </div>
 
-        <div id="comparison-container">
-            <div id="needs-results">
-                <div id="recommended-needs">
-                    <h6>Recommended Necessary Spending</h6>
+        <div id="suggestion-container">
+            <div id="housing-suggestion">
+                <div id="recommended-housing">
+                    <h6>Recommended Mortgage/Rent</h6>
                     <h6>$</h6>
                 </div>
-                <div id="your-needs">
-                    <h6>Your Necessary Spending</h6>
-                    <h6>$</h6>
-                </div>
-            </div>
-            <div id="wants-results">
-                <div id="recommended-wants">
-                    <h6>Recommended Personal Spending</h6>
-                    <h6>$</h6>
-                </div>
-                <div id="your-wants">
-                    <h6>Your Personal Spending</h6>
+                <div id="your-housing">
+                    <h6>Your Mortgage/Rent</h6>
                     <h6>$</h6>
                 </div>
             </div>
-            <div id="savings-results">
-                <div id="recommended-savings">
-                    <h6>Recommended Savings</h6>
+            <div id="transportation-suggestion">
+                <div id="recommended-transportation">
+                    <h6>Recommended Transportation</h6>
                     <h6>$</h6>
                 </div>
-                <div id="your-savings">
-                    <h6>Your Savings</h6>
+                <div id="your-transportation">
+                    <h6>Your Transportation</h6>
+                    <h6>$</h6>
+                </div>
+            </div>
+            <div id="debt-suggestion">
+                <div id="recommended-debt">
+                    <h6>Recommended Total Debt</h6>
+                    <h6>$</h6>
+                </div>
+                <div id="your-debt">
+                    <h6>Your Total Debt</h6>
                     <h6>$</h6>
                 </div>
             </div>
         </div>
 
-        <div id="comparison-container">
-            <div id="needs-results">
-                <div id="recommended-needs">
-                    <h6>Recommended Necessary Spending</h6>
-                    <h6>$</h6>
-                </div>
-                <div id="your-needs">
-                    <h6>Your Necessary Spending</h6>
-                    <h6>$</h6>
-                </div>
+        <div id="solution-container">
+            <div id="spending-solution">
+                <h6>Decrease your necessity spending by $X/month and personal spending by $X/month to reach an optimal budget</h6>
             </div>
-            <div id="wants-results">
-                <div id="recommended-wants">
-                    <h6>Recommended Personal Spending</h6>
-                    <h6>$</h6>
-                </div>
-                <div id="your-wants">
-                    <h6>Your Personal Spending</h6>
-                    <h6>$</h6>
-                </div>
-            </div>
-            <div id="savings-results">
-                <div id="recommended-savings">
-                    <h6>Recommended Savings</h6>
-                    <h6>$</h6>
-                </div>
-                <div id="your-savings">
-                    <h6>Your Savings</h6>
-                    <h6>$</h6>
-                </div>
+            <div id="income-solution">
+                <h6>Increase your income by $X/month to reach an optimal budget</h6>
             </div>
         </div>
     </div>
